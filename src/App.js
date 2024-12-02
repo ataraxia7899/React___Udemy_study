@@ -1,4 +1,6 @@
+import Card from "./components/Card.js";
 import ExpenseItem from "./components/ExpenseItem.js"
+import "./index.css"
 
 function App() {
     const expenses = [
@@ -29,8 +31,8 @@ function App() {
     ];
 
     return (
-        <div>
-            <h2 align="center">지출 목록</h2>
+        <Card className="expense_components">
+            <h2 className="app_title">지출 목록</h2>
             <ExpenseItem
                 title={expenses[0].title}
                 amount={expenses[0].amount}
@@ -51,7 +53,7 @@ function App() {
                 amount={expenses[3].amount}
                 date={expenses[3].date}
             />
-        </div>
+        </Card>
     );
 }
 
