@@ -4,7 +4,7 @@ import Card from "../UI/Card.js"
 import "./ExpenseItem.css"
 
 // 지출 목록 컴포넌트
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
     return (
         <Card className="expense-item">
             <ExpenseDate date={props.date} />

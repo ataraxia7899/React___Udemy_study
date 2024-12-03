@@ -4,7 +4,7 @@ import ExpenseItem from "./components/Expenses/ExpenseItem.js"
 import "./index.css"
 import expenses from "./expenses.js"
 
-function App() {
+const App = () => {
     return (
         <Card className="expense_components">
             <h2 className="app_title">지출 목록</h2>

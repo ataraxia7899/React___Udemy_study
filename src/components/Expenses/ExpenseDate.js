@@ -2,7 +2,7 @@ import React from "react";
 import "./ExpenseDate.css";
 
 //지출 날짜를 렌더링하는 컴포넌트
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
     const month = props.date.toLocaleString("ko-KR", {month: "long"});
     const year = props.date.getFullYear();
     const day = props.date.toLocaleString("ko-KR", {day: "2-digit"});
