@@ -1,3 +1,4 @@
+import React from "react";
 import "./ExpenseDate.css";
 
 //지출 날짜를 렌더링하는 컴포넌트

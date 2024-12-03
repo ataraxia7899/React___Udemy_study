@@ -1,5 +1,6 @@
+import React from "react";
 import ExpenseDate from "./ExpenseDate.js"
-import Card from "./Card.js"
+import Card from "../UI/Card.js"
 import "./ExpenseItem.css"
 
 // 지출 목록 컴포넌트
