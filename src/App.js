@@ -3,10 +3,12 @@ import Card from "./components/UI/Card.js";
 import ExpenseItem from "./components/Expenses/ExpenseItem.js"
 import "./index.css"
 import expenses from "./expenses.js"
+import NewExpense from "./components/NewExpense/NewExpense.js";
 
 const App = () => {
     return (
         <Card className="expense_components">
+            <NewExpense />
             <h2 className="app_title">지출 목록</h2>
             {expenses.map((expense) => (
                 /* JS의 map을 활용해 배열의 
