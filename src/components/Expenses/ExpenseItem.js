@@ -5,7 +5,8 @@ import "./ExpenseItem.css"
 
 // 지출 목록 컴포넌트
 const ExpenseItem = (props) => {
-    const [title, setTitle] = useState();
+    const [title, setTitle] = useState(props.title);
+    console.log('ExpenseItem evaluated by React');
 
     const clickHandler = () => {
         setTitle("Update");

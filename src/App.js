@@ -36,10 +36,7 @@ const App = () => {
         console.log("In App.js");
         console.log(expense);
     };
-
-    // const [filteredYear, setFilteredYear] = useState("2020");
-    // const [filterInfoText, setFilterInfoText] = useState("2019, 2021 & 2022")
-
+    
     return (
         <div>
             <NewExpense onAddExpense={addExpenseHandler} />
