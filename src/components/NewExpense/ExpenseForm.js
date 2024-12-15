@@ -60,7 +60,7 @@ const ExpenseForm = (props) => {
             </div>
             <div className="new-expense__control">
                 <label>Date</label>
-                <input type="date" min="2019-01-01" max="2030-12-31" value={enteredDate} onChange={dateChangeHandler} />
+                <input type="date" min="2019-01-01" max="2022-12-31" value={enteredDate} onChange={dateChangeHandler} />
                 {/* 타입을 date로 설정함으로 날짜선택기를 제공해주도록 하고
                 최소날짜와 최대 설정할 수 있는 날짜를 설정함.       */}
             </div>

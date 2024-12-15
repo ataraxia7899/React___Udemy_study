@@ -21,33 +21,30 @@ const Expenses = (props) => {
     const filterChangeHandler = (selectedYear) => {
         setFilteredYear(selectedYear);
     };
+    
+    // getFullYear()로 년도값을 가져와 선택된 년도만 리턴
+    const filteredExpenses = props.items.filter(expense => {
+        return expense.date.getFullYear().toString() === filteredYear;
+    });
+
     return (
         <Card className="expenses">
+            {/* 년도 필터 */}
             <ExpensesFilter
                 selected={filteredYear}
                 onChangeFilter={filterChangeHandler}
             />
 
-            <ExpenseItem
-                title={props.items[0].title}
-                amount={props.items[0].amount}
-                date={props.items[0].date}
-            />
-            <ExpenseItem
-                title={props.items[1].title}
-                amount={props.items[1].amount}
-                date={props.items[1].date}
-            />
-            <ExpenseItem
-                title={props.items[2].title}
-                amount={props.items[2].amount}
-                date={props.items[2].date}
-            />
-            <ExpenseItem
-                title={props.items[3].title}
-                amount={props.items[3].amount}
-                date={props.items[3].date}
-            />
+            {/* title값과 amount값같은 값들을 동적으로 자동 배정해줌 */}
+            {/* filteredExpenses를 통해 년도값이 같은 소비목록만 조회됨 */}
+            {filteredExpenses.map((expense) => (
+                <ExpenseItem
+                    key={expense.id}
+                    title={expense.title}
+                    amount={expense.amount}
+                    date={expense.date}
+                />
+            ))}
         </Card>
     );
 };
