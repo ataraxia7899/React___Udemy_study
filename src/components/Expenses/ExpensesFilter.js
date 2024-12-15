@@ -2,6 +2,7 @@ import React from 'react';
 
 import './ExpensesFilter.css';
 
+// 필터 선택했을때 선택된 년도를 부모 컴포넌트로 값을 보내주는 컴포넌트
 const ExpensesFilter = (props) => {
     const dropdownChangeHandler = (event) => {
         props.onChangeFilter(event.target.value);
