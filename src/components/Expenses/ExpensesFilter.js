@@ -17,7 +17,7 @@ const ExpensesFilter = (props) => {
         <div className="expenses-filter">
             <div className="expenses-filter__control">
                 <label>년도별 필터</label>
-                <label style={txtStyle}>2019년도부터 2022년까지만 기록됨</label>
+                <label style={txtStyle}>2019년도부터 2022년까지만 기록됩니다.</label>
                 <select value={props.selected} onChange={dropdownChangeHandler}>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
