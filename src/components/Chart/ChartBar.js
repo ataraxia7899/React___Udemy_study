@@ -9,8 +9,7 @@ const ChartBar = (props) => {
     /* 윗줄과 같은 기능을 구사하지만 다른 유형으로 적을 수 있는 코드 
     if (props.maxValue > 0) {
         barFillHeight = Math.round((props.value / props.maxValue) * 100) + "%";
-    }
-    */
+    }*/
     
     return (
         <div className="chart-bar">

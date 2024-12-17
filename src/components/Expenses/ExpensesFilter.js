@@ -8,22 +8,19 @@ const ExpensesFilter = (props) => {
         props.onChangeFilter(event.target.value);
     };
 
-    // 글자 색 빨간색으로 변경
-    const txtStyle = {
-        color : "#99011e"
-    }
-
     return (
         <div className="expenses-filter">
             <div className="expenses-filter__control">
-                <label>년도별 필터</label>
-                <label style={txtStyle}>2019년도부터 2022년까지만 기록됩니다.</label>
+                <h3>년도별 필터</h3>
                 <select value={props.selected} onChange={dropdownChangeHandler}>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
                 </select>
+            </div>
+            <div>
+            <label style={{ margin: "1rem 0", textAlign:"center", display:"block", color: 'red'}}>2019년도부터 2022년까지만 기록됩니다.</label>
             </div>
         </div>
     );

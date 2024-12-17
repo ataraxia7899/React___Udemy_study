@@ -24,7 +24,12 @@ const Expenses = (props) => {
                 selected={filteredYear}
                 onChangeFilter={filterChangeHandler}
             />
+            {/* 차트 컴포넌트 */}
             <ExpensesChart expenses={filteredExpenses} />
+            <div>
+                <label style={{ fontWeight:"900", margin: "1rem 0", color: "white", display: 'block', textAlign: 'center' }}>그래프는 최대값을 기준으로 비율이 정해집니다.</label>
+            </div>
+            {/* 지출 내역 리스트 컴포넌트 */}
             <ExpensesList items={filteredExpenses} />
         </Card>
     );

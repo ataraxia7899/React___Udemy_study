@@ -63,24 +63,24 @@ const ExpenseForm = (props) => {
             <div>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
-                    <label>Title</label>
+                    <label>이름</label>
                     <input type="text" value={enteredTitle} onChange={(titleChangeHandler)} />           
                 </div>
                 <div className="new-expense__control">
-                    <label>amount</label>
+                    <label>결제한 금액</label>
                     <input type="number" min="0.01" step="0.01" value={enteredAmount} onChange={amountChangeHandler} />     
                     {/* 숫자타입을 받으며 최솟값 0.01, 간격 0.01로 설정       */}
                 </div>
                 <div className="new-expense__control">
-                    <label>Date</label>
+                    <label>날짜</label>
                     <input type="date" min="2019-01-01" max="2022-12-31" value={enteredDate} onChange={dateChangeHandler} />
                     {/* 타입을 date로 설정함으로 날짜선택기를 제공해주도록 하고
                     최소날짜와 최대 설정할 수 있는 날짜를 설정함.       */}
                 </div>
             </div>
             <div className="new-expense__actions">
-                <button onClick={FormInVisible}>Cancel</button>
-                    <button type="submit">Add Expense</button>
+                <button type="submit">지출내역 저장</button>
+                <button onClick={FormInVisible}>양식 숨기기</button>
             </div>
             </div>
             )}
