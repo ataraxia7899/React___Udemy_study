@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./InvestmentForm.css";
+import classes from "./InvestmentForm.module.css";
 
 // 투자 계산을 위한 input값 입력 폼 생성 컴포넌트
 function InvestmentForm(props) {
@@ -28,24 +28,24 @@ function InvestmentForm(props) {
     }
 
     const inputChangeHandler1 = (input, value) => {
-        SetUserInput1(() => {return {[input]: value};});
+        SetUserInput1(() => {return {[input]: value}});
     };
 
     const inputChangeHandler2 = (input, value) => {
-        SetUserInput2(() => {return {[input]: value};});
+        SetUserInput2(() => {return {[input]: value}});
     };
 
     const inputChangeHandler3 = (input, value) => {
-        SetUserInput3(() => {return {[input]: value};});
+        SetUserInput3(() => {return {[input]: value}});
     };
 
     const inputChangeHandler4 = (input, value) => {
-        SetUserInput4(() => {return {[input]: value};});
+        SetUserInput4(() => {return {[input]: value}});
     };
 
     return (
-        <form onSubmit={submitHandler} className="form">
-            <div className="input-group">
+        <form onSubmit={submitHandler} className={classes.form}>
+            <div className={classes['input-group']}>
                 <p>
                     <label htmlFor="current-savings">현재 저축액 (원)</label>
                     <input
@@ -78,7 +78,7 @@ function InvestmentForm(props) {
                     />
                 </p>
             </div>
-            <div className="input-group">
+            <div className={classes['input-group']}>
                 <p>
                     <label htmlFor="expected-return">
                         예상 이자율 (연 %, 연간)
@@ -110,15 +110,15 @@ function InvestmentForm(props) {
                     />
                 </p>
             </div>
-            <p className="actions">
+            <p className={classes.actions}>
                 <button
                     onClick={resetHandler}
                     type="reset"
-                    className="buttonAlt"
+                    className={classes.buttonAlt}
                 >
                     초기화
                 </button>
-                <button type="submit" className="button">
+                <button type="submit" className={classes.button}>
                     계산
                 </button>
             </p>

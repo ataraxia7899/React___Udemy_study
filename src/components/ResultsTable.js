@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./ResultsTable.module.css";
 
 // 한국 통화 형식으로 숫자를 표시하기 위한 객체 생성
 const formatter = new Intl.NumberFormat("ko-Kr",{
@@ -11,7 +12,7 @@ const formatter = new Intl.NumberFormat("ko-Kr",{
 // 투자 계산 결과를 표로 보여주는 컴포넌트
 function InvestmentTable(props) {
 return(
-    <table className="result">
+    <table className={classes.result}>
         <thead>
             <tr>
                 <th>연도</th>
