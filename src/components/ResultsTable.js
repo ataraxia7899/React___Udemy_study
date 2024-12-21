@@ -30,7 +30,7 @@ return(
                 {/* 연말 총 저축액 */}
                 <td>{formatter.format(yearData.savingsEndOfYear)}</td>
                 {/* 해당 연도에 발생한 이자 */}
-                <td>{formatter.format(yearData.yearInterest)}</td>
+                <td>{formatter.format(yearData.yearlyInterest)}</td>
                 {/* 누적된 총 이자 = (기여한 기간 * 총 이자) - 연간 기여금 */}
                 <td>{formatter.format(yearData.savingsEndOfYear - props.initialInvestment - yearData.yearlyContribution * yearData.year)}</td>
                 {/* 총 투자 연금금 = 초기 투자금에서 모든 기여액을 더한 금액*/}
