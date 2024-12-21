@@ -2,22 +2,22 @@ import logo from './assets/investment-calculator-logo.png';
 
 function App() {
   const calculateHandler = (userInput) => {
-    // Should be triggered when form is submitted
-    // You might not directly want to bind it to the submit event on the form though...
+    // 폼이 제출될 때 실행되어야 함
+    // 하지만 폼의 submit 이벤트에 직접 바인딩하지 않는 것이 좋을 수 있음...
 
-    const yearlyData = []; // per-year results
+    const yearlyData = []; // 연간 결과
 
-    let currentSavings = +userInput['current-savings']; // feel free to change the shape of this input object!
-    const yearlyContribution = +userInput['yearly-contribution']; // as mentioned: feel free to change the shape...
+    let currentSavings = +userInput['current-savings']; // 이 입력 객체의 형태는 자유롭게 변경 가능합니다!
+    const yearlyContribution = +userInput['yearly-contribution']; // 앞서 언급했듯이 형태는 자유롭게 변경 가능...
     const expectedReturn = +userInput['expected-return'] / 100;
     const duration = +userInput['duration'];
 
-    // The below code calculates yearly results (total savings, interest etc)
+    // 아래 코드는 연간 결과(총 저축액, 이자 등)를 계산합니다
     for (let i = 0; i < duration; i++) {
       const yearlyInterest = currentSavings * expectedReturn;
       currentSavings += yearlyInterest + yearlyContribution;
       yearlyData.push({
-        // feel free to change the shape of the data pushed to the array!
+        // 배열에 추가되는 데이터의 형태는 자유롭게 변경 가능합니다!
         year: i + 1,
         yearlyInterest: yearlyInterest,
         savingsEndOfYear: currentSavings,
@@ -25,7 +25,7 @@ function App() {
       });
     }
 
-    // do something with yearlyData ...
+    // yearlyData로 무언가를 수행...
   };
 
   return (
@@ -68,8 +68,8 @@ function App() {
         </p>
       </form>
 
-      {/* Todo: Show below table conditionally (only once result data is available) */}
-      {/* Show fallback text if no data is available */}
+      {/* 결과 데이터가 있을 때만 아래 테이블을 조건부로 보여주세요 */}
+      {/* 데이터가 없을 경우 대체 텍스트를 보여주세요 */}
 
       <table className="result">
         <thead>
