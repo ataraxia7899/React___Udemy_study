@@ -28,19 +28,19 @@ function InvestmentForm(props) {
     }
 
     const inputChangeHandler1 = (input, value) => {
-        SetUserInput1(() => {return {[input]: value}});
+        SetUserInput1(() => {return {[input]: +value}});
     };
 
     const inputChangeHandler2 = (input, value) => {
-        SetUserInput2(() => {return {[input]: value}});
+        SetUserInput2(() => {return {[input]: +value}});
     };
 
     const inputChangeHandler3 = (input, value) => {
-        SetUserInput3(() => {return {[input]: value}});
+        SetUserInput3(() => {return {[input]: +value}});
     };
 
     const inputChangeHandler4 = (input, value) => {
-        SetUserInput4(() => {return {[input]: value}});
+        SetUserInput4(() => {return {[input]: +value}});
     };
 
     return (
